@@ -24,6 +24,17 @@
     <br>
 </p>
 
+# <font color="red">Use SUQL-turbo Library</font>
+
+The setup process is similar to to SUQL's. To use SUQL-turbo, first set `PYTHONPATH` to the src folder
+```
+export PYTHONPATH=:path/to/suql-turbo/src
+```
+Then run embedding
+```
+cd path/to/suql-turbo/
+python src/suql/experimental/embedding.py
+```
 
 # What is SUQL
 
