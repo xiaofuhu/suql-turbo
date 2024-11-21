@@ -6,10 +6,14 @@ Here is some context:
 
 Context ends.
  
-The user asked the following question:
+The user provided the following input:
 
-{{ question }}
+{{ input }}
 
-What are some short and definite questions you can ask about each line in the log text to identify relevant sections of the log to look at? Each question must be able to be answered by and only by "Yes" or "No", where "Yes" indicates that the log is relevant to the user question and "No" indicates the opposite.
+What are some short and definite questions you can ask about each line in the log text to identify relevant sections of the log to focus on? Each question must be able to be answered by and only by "Yes" or "No", where "Yes" indicates that the log is relevant to the user input and "No" indicates the opposite.
+
+Types of questions you can ask:
+- Whether the log contains the text of the input. For example, if the input is "system error", you could ask "Does the log text contain system error?"
+- Whether the log is a likely cause or result of the event indicated by the input. For example, if the input is "Instance X is terminating...", you could ask "Is this log likely to be a cause or result of the termination of Instance X?"
 
 Provide at least 3 questions, each on a new line without any bullet symbol:

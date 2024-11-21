@@ -74,7 +74,7 @@ def _get_relevance_check_subqueries(
     continuation, _ = llm_generate(
         "prompts/log_relevance_check_question_generation.prompt",
         {
-            "question": original_query,
+            "input": original_query,
             "context": context
         },
         engine=engine,
