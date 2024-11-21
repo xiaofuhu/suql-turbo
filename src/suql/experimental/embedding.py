@@ -2,7 +2,7 @@ from suql.faiss_embedding import MultipleEmbeddingStore
 
 embedding_store = MultipleEmbeddingStore()
 embedding_store.add(table_name="log_records",
-                    primary_key_field_name="p_key",
+                    primary_key_field_name="record_id",
                     free_text_field_name="content",
                     db_name="postgres",
                     user="creator_role",
