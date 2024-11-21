@@ -1869,7 +1869,7 @@ def suql_execute(
     table_w_ids,
     database,
     fts_fields=[],
-    llm_model_name="gpt-3.5-turbo-0125",
+    llm_model_name="gpt-4o-mini",
     max_verify=20,
     loggings="",
     log_filename=None,

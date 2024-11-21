@@ -69,12 +69,12 @@ def _answer(
 def _get_relevance_check_subqueries(
     original_query: str,
     context: str = "",
-    engine="gpt-3.5-turbo-0125"
+    engine="gpt-4o-mini"
 ):
     continuation, _ = llm_generate(
         "prompts/log_relevance_check_question_generation.prompt",
         {
-            "question": original_query,
+            "input": original_query,
             "context": context
         },
         engine=engine,

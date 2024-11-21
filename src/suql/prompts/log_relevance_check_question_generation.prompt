@@ -6,10 +6,26 @@ Here is some context:
 
 Context ends.
  
-The user asked the following question:
+The user provided the following input:
 
-{{ question }}
+{{ input }}
 
-What are some short and definite questions you can ask about each line in the log text to identify relevant sections of the log to look at? Each question must be able to be answered by and only by "Yes" or "No", where "Yes" indicates that the log is relevant to the user question and "No" indicates the opposite.
+Come up with some short and definite questions you can ask about each line in the log text to identify relevant sections of the log to focus on. Each question must be able to be answered by and only by "Yes" or "No", where "Yes" indicates that the log is relevant to the user input and "No" indicates the opposite. Do not print out the questions.
 
-Provide at least 3 questions, each on a new line without any bullet symbol:
+Types of questions you can ask:
+- Whether the log is related to the key part of the text of the input. For example, if the input is "system error", you could ask "Does this log entry have any potential relevance to system error?"
+- Whether the log is a highly significant message about the component mentioned in the input. For example, if the input is "Backend server is not working...", you could ask "Is this log entry an error or warning message about the backend server?"
+- Whether the log is a likely cause or result of the event indicated by the input. For example, if the input is "Instance X is terminating...", you could ask "Is this log entry likely to be a cause or result of the termination of Instance X?"
+
+Provide at least 3 questions.
+
+Finally, combine all the questions into a single question, connected with logical OR.
+
+For example, for questions:
+- Does the log indicate an error?
+- Is the log content significant?
+- Could the log be relevant to a cause of a segmentation fault?
+You should put them into one question like the following:
+- Does the log indicate an error, or is  the log content significant, or could the log be relevant to a cause of a segmentation fault?
+
+Provide the final question on a new line without any bullet symbol:
