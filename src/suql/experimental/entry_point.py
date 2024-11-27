@@ -31,7 +31,7 @@ LIMIT 20
 """
 # suql = "SELECT * FROM log_records WHERE is_relevant(content, 'What was wrong with the system?') LIMIT 1"
 
-table_w_ids = {"log_records": "record_id"}
+table_w_ids = {"log_records_small": "record_id"}
 database = "postgres"
 # Try better: llm_model_name="gpt-4o-mini"
 answer = suql_execute(suql, table_w_ids, database, llm_model_name='gpt-4o-mini')
